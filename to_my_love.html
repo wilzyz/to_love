@@ -6,185 +6,254 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Admin | Transaction Queuing System</title>
- 	
+  <link rel="stylesheet" type="text/css" href="output.css">
+
 </head>
 <style>
-#position{
-	position:fixed;
-	bottom:180px;
-	left:25px;
-}
-.sunflower{
-  position:relative;
-  height:30px;
-  width:30px;
-}
-.head {
-  animation: hmove 2s infinite linear;
-  height: 50px;
-  width: 62px;
-  position: relative;
-  left:8px;
-  top:39px;
-  transform-origin: 50% -7px;
-  user-select: none;
-}
-.head .eye {
-  background: #43699a;
-  border-radius: 10px;
-  height: 5px;
-  position: absolute;
-  top: 30px;
-  width: 5px;
-}
-.head .eye#eye-1 {
-  left: 17px;
-   animation: eye 4s linear infinite normal 0.5s;
-}
-.head .eye#eye-2 {
-  right: 17px;
-  animation: eye 4s linear infinite normal 0.5s;
-}
-.head .mouth {
-  background: #ecf0f1;
-  border-radius: 30px;
-  bottom: 2px;
-  clip: rect(8px, 15px, 16px, 0);
-  height: 16px;
-  margin-left: -7.5px;
-  position: absolute;
-  left: 50%;
-  width: 15px;
+$bg: #000;
+
+$tab-bg: #f9f9f9;
+
+$f-color: #ba9872;
+$s-color: #967b5c;
+$t-color: #a38564;
+$fo-color: #f9f9f9;
+$fi-color: #e2e2e2;
+
+//Mixins
+@mixin posAbsolute($p) {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  @if ($p == a) {
+    position: absolute;
+  } @else if($p == r) {
+    position: relative;
+  }
 }
 
-.petals {
-  z-index:-1;
-  border-radius:100%;
-  display:inline-block;
-  background-color:#faaa18;
-  height:50px;
-  width:50px;
-  position:absolute;
-  animation:petals 2s infinite linear;
-  box-shadow:15px 17px #ffe000,
-    -15px 17px #ffe000,
-    -22px -7px #ffe000,
-    0px -22px #ffe000,
-    22px -7px #ffe000;
-}
-.trunk{
-	height: 65px; width: 5px;
-	background:#77b039;
-	left: 37px;top:100px;
-	position:absolute;
-	z-index:-2;
-	animation:trunk 2s infinite linear;
-}
-.left-branch{
-	background: #77b039;
-	height: 35px; width: 9px;
-	position: absolute; left: -12px; top: 24px;
-	border-radius:100% 0% 0% 0%;
-	-webkit-border-radius:100% 0% 0% 0%;
-	-moz-border-radius:100% 0% 0% 0%;
-	-ms-border-radius:100% 0% 0% 0%;
-	-o-border-radius:100% 0% 0% 0%;
-	
-	transform: rotate(-50deg);
-	-webkit-transform: rotate(-50deg);
-	-moz-transform: rotate(-50deg);
-	-ms-transform: rotate(-50deg);
-	-o-transform: rotate(-50deg);
+// General styles
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.right-branch{
-	background: #77b039;
-	height: 35px; width: 9px;
-	position: absolute; top: 24px; left: 10px;
-	border-radius:0% 100% 0% 0%;
-	-webkit-border-radius:0% 100% 0% 0%;
-	-moz-border-radius:0% 100% 0% 0%;
-	-ms-border-radius:0% 100% 0% 0%;
-	-o-border-radius:0% 100% 0% 0%;
-	
-	transform: rotate(50deg);
-	-webkit-transform: rotate(50deg);
-	-moz-transform: rotate(50deg);
-	-ms-transform: rotate(50deg);
-	-o-transform: rotate(50deg);
-}
-.vase{
-position:absolute;
-   top:165px;
-   left:13px;
-   height: 0; 
-   width: 38px;
-   border-top: 45px solid #faaa18;
-   border-left: 8px solid transparent;
-   border-right: 8px solid transparent;
-}
-.vase:before,.vase:after {
-	content: '';
-	position: absolute;
-	background: #faa118;
-}
-.vase:before{
-	background: #f9a018;
-	width: 58px; height: 20px;
-	top: -50px; left: -10px;
-	position:absolute;
-	box-shadow: 0 5px 10px -9px black;
-	-moz-transform: 0 5px 10px -9px black;
-	-ms-transform: 0 5px 10px -9px black;
-	-o-transform: 0 5px 10px -9px black;
-}
-
-@keyframes petals {
-	0% {transform: rotate(0);left:10px;}
-	25% {left:20px;}
-	50% {left:10px;}
-	75% {left:20px;}
-	100% {transform: rotate(360deg);left:10px;}
-}
-@keyframes hmove {
-	0% {left:5px;}
-	25% {left:15px;}
-	50% {left:5px;}
-	75% {left:15px;}
-	100% {left:5px;}
-}
-@keyframes eye{
-	from { }
-    79% {height:5px;}
-	80% {height:0px;}
-	85%{height:5px;}
-	to {height:5px;}
-}
-@keyframes trunk {
-	0% {left:34px;transform:rotate(-5deg);}
-	25% {left:40px;transform:rotate(5deg);}
-	50% {left:34px;transform:rotate(-5deg);}
-	75% {left:40px;transform:rotate(5deg);}
-	100% {left:34px;transform:rotate(-5deg);}
-}
+html,
 body {
-  background:#ffffff;
-  text-align:center;
+  height: 100%;
 }
+
+body {
+  width: 100%;
+  background-color: $bg;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-height: 500px) {
+    margin: 25% 0 25% 0;
+  }
+}
+
+//Styles
+.envelop {
+  width: 15rem;
+  height: 10rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  @media (min-width: 400px) and (max-width: 600px) {
+    width: 20rem;
+    height: 15rem;
+  }
+  @media (min-width: 600px) {
+    width: 25rem;
+    height: 20rem;
+  }
+  @media (min-width: 600px) and (min-height: 600px) {
+    bottom: 20%;
+  }
+
+  &__front-paper {
+    @include posAbsolute(a);
+    border-radius: 0.7rem;
+    border: 0.35rem solid $s-color;
+    background-color: $f-color;
+    clip-path: polygon(100% 0%, 50% 70%, 0% 0%, 0% 100%, 100% 100%);
+    z-index: 300;
+  }
+
+  &__back-paper {
+    @include posAbsolute(a);
+    border-radius: 0.7rem;
+    background-color: $s-color;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 90%);
+    z-index: 100;
+  }
+
+  &__up-paper {
+    @include posAbsolute(r);
+    border-radius: 0.7rem;
+    background-color: $s-color;
+    z-index: 400;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 81%);
+  }
+
+  &__sticker {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    margin: auto;
+    top: 30%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 400;
+    background-image: url("https://www.freepnglogos.com/uploads/heart-png/emoji-heart-33.png");
+    background-color: $fo-color;
+    border: 0.3rem solid $fi-color;
+    background-size: 2rem;
+    background-position: center;
+
+    @media (max-width: 400px) {
+      background-size: 1.2rem;
+    }
+    @media (min-width: 600px) {
+      height: 15%;
+    }
+  }
+
+  &__false-sticker {
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    margin: auto;
+    top: 30%;
+    left: 80%;
+    bottom: 0;
+    right: 0;
+    z-index: 300;
+    background-image: url("https://www.freepnglogos.com/uploads/heart-png/emoji-heart-33.png");
+    background-color: $fo-color;
+    border: 0.3rem solid $fi-color;
+    background-size: 2rem;
+    background-position: center;
+
+    @media (max-width: 400px) {
+      background-size: 1.2rem;
+    }
+    @media (min-width: 600px) {
+      height: 15%;
+    }
+  }
+
+  &__content {
+    @include posAbsolute(a);
+    z-index: 200;
+  }
+}
+
+.love-notes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.note {
+  width: 95%;
+  height: 30%;
+  background-color: $tab-bg;
+  position: absolute;
+  overflow: hidden;
+  transition: height 0.5s, opacity 0.25s;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+
+  &:nth-child(1) {
+    bottom: 60%;
+  }
+
+  &:nth-child(2) {
+    bottom: 40%;
+  }
+
+  &:nth-child(3) {
+    bottom: 20%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    height: 45%;
+  }
+
+  &__text {
+    font-family: "Sofia";
+    padding: 1rem;
+
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      text-align: center;
+
+      @media (min-width: 300px) and (max-width: 600px) {
+        font-size: 1.025rem;
+      }
+      @media (min-width: 600px) {
+        font-size: 1.15rem;
+      }
+    }
+  }
+}
+
+.scissors {
+  cursor: url("https://i.postimg.cc/GtLCdKxR/sisors.png"), pointer;
+  &:active {
+    cursor: url("https://i.postimg.cc/GtXQ7WPZ/pngwing-com.png"), pointer;
+  }
+}
+
+.cursor {
+  cursor: pointer;
+}
+
 </style>
-<body>
-<div id="position" class="sunflower">
-	<div class="head">
-	    <div id="eye-1" class="eye"></div>
-	    <div id="eye-2" class="eye"></div>
-	    <div class="mouth"></div>
-	</div>
-	<div class="petals"></div>
-	<div class="trunk">
-		<div class="left-branch"></div>
-		<div class="right-branch"></div>
-	</div>
-	<div class="vase"></div>
-</div>
+<body class="scissors">
+  <div class="envelop">
+    <div class="envelop__front-paper"></div>
+    <div class="envelop__back-paper"></div>
+    <div class="envelop__up-paper js-up-paper"></div>
+    <div class="envelop__sticker js-sticker"></div>
+    <div class="envelop__false-sticker"></div>
+    <div class="envelop__content js-envelop-content">
+      <div class="love-notes">
+        <div class="note js-note">
+          <div class="note__text">
+            <p>
+              Hola amor, te quiero dar las gracias por todo, por las alegrías, por las risas, por los lindos momentos pero, también por los malos, porque aunque haya malos momentos...
+            </p>
+          </div>
+        </div>
+        <div class="note js-note">
+          <div class="note__text">
+            <p>quiero pasarlos contigo, luchar y superarlos juntos. La verdad eres muy importante para mi, amo lo que tenemos juntos y sé que podemos mejorar y mantenerlo si los dos queremos y créeme que yo quiero.</p>
+          </div>
+        </div>
+        <div class="note js-note">
+          <div class="note__text">
+            <p>En verdad te amo y se que podemos lograrlo, y lo intentare hasta que ya no este en mis manos, porque no estoy contigo por necesidad ni por superficialidad, estoy contigo por elección.</p>
+            <p>Te amo mensa &hearts;.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
+<script>
+  </script>
