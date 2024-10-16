@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Verses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Julee&family=Kalam:wght@300;400;700&family=Nerko+One&family=Rock+Salt&display=swap');
+        
+        body {
+            overflow-x: hidden;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Merienda:wght@300..900&display=swap&family=Julee&family=Kalam:wght@300;400;700&family=Nerko+One&family=Rock+Salt&display=swap&family=Merienda:wght@300..900&display=swap');
+
+body {
+    font-family: 'Kalam', sans-serif; /* Use Kalam as the main font */
+    background-image: url(img/13.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Nerko One', sans-serif; /* Use Nerko One for headings */
+}
+
+h2 {
+    font-family: 'Julee', cursive; /* Use Julee for subheadings */
+}
+
+p {
+    font-family: 'Gloria Hallelujah', cursive; /* Use Rock Salt for paragraphs */
+}
+.subtext{
+    font-size: calc(2vw - 5px);
+}
+
+
+    .navbar-brand img {
+        height: 100%; /* Make the image fill the navbar height */
+        max-height: 8vh; /* Same as navbar height */
+        width: auto; /* Maintain aspect ratio */
+    }
+    
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-secondary border shadow-sm sticky-top" data-aos="fade-down" data-aos-duration="500">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/Yhan.png" alt="Logo"></a>
+            <div class="mx-auto text-center">
+                <h1 class="m-0">BIBLE VERSES</h1>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-3" data-aos="fade-up" data-aos-delay="500">
+        <h3>As a God-centered relationship, I have learned over the past years that we need wisdom from God, not just from ourselves. Our hearts can change, so we should not base our relationship or our wisdom solely on our feelings, but rather on the wisdom of our Lord God through His Word. His Word never changes and will always guide us in our relationship. I have chosen some Bible verses that might help us, and I’ve also included some messages that will be shown after clicking "Show Message." I love you!</h3>
+    </div>
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4"><div class="col">
+            <div class="card" data-aos="fade-up" data-aos-delay="700">
+                <img src="verses/1.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    <button id="toggleMessageButton1" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage1" aria-expanded="false" aria-controls="collapseMessage1" onclick="toggleMessage('toggleMessageButton1')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage1">
+                        <div class="card card-body">
+                            In a challenging world, we need each other to strengthen each other. There are times that circumstances rise but with this verse, it reminds us that we need each other to make each other stronger.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up" data-aos-delay="700">
+                <img src="verses/2.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    <button id="toggleMessageButton2" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage2" aria-expanded="false" aria-controls="collapseMessage2" onclick="toggleMessage('toggleMessageButton2')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage2">
+                        <div class="card card-body">
+                            Before, this is our greatest struggle, being gentle and having patience to each other. May this verse remind us that in any problem we have, our aim should be resolving every problem with patience and a humble heart.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up" data-aos-delay="700">
+                <img src="verses/3.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    <button id="toggleMessageButton3" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage3" aria-expanded="false" aria-controls="collapseMessage3" onclick="toggleMessage('toggleMessageButton3')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage3">
+                        <div class="card card-body">
+                            Honestly, before, I was having a hard time forgiving people who have hurt me and that's why I've been bringing up things in the past that we have resolved because I am slow to forgive. But, not just for me, may this verse be a reminder for us that if God has forgiven us in our sins to Him may we forgive each other as much as He forgave us.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/4.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    <button id="toggleMessageButton4" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage4" aria-expanded="false" aria-controls="collapseMessage4" onclick="toggleMessage('toggleMessageButton4')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage4">
+                        <div class="card card-body">
+                            This verse made me blushed and smile because I imagined us saying this to each other. It almost made me cry out of happiness because having to love someone that will always be there with you is another level of love and I know that we both love each other. May this verse remind us that we should never break up ever again.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/5.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    <button id="toggleMessageButton5" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage5" aria-expanded="false" aria-controls="collapseMessage5" onclick="toggleMessage('toggleMessageButton5')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage5">
+                        <div class="card card-body">
+                            Problems are a normally occur in our life. But having someone beside you that will motivate you and be there to inspire you makes the difference. This verse reminds us to rely more on each other because if ever you are down, then I'll cheer you up and I know you will do the same. Even when we are not in good terms or are mad to each other, may this verse remind us that we have each other.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/6.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    <button id="toggleMessageButton6" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage6" aria-expanded="false" aria-controls="collapseMessage6" onclick="toggleMessage('toggleMessageButton6')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage6">
+                        <div class="card card-body">
+                            We have been doing this and I put this here to constantly remind us to be an inspiration and encourage one another. Yes, we both sometimes have been depressed, sad, mad or feeling down, but may this verse remind us to encourage one another in times of trouble because encouragement builds us and makes our love grow fonder.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/7.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    <button id="toggleMessageButton7" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage7" aria-expanded="false" aria-controls="collapseMessage7" onclick="toggleMessage('toggleMessageButton7')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage7">
+                        <div class="card card-body">
+                            This is a common verse but I have put this here to remind us of what we should be doing. We sometimes fail to follow and remember this. But may we remember that we both are not perfect, we may hurt each other, have been impatient to each other, disrespect each other, and many other things. We have sinned to each other a lot of times, but what we also need to know is that we are also growing by the time passes by. We learn from each others mistake and these mistakes makes us stronger than before, makes us more patient, makes us more kind to each other, makes us love each other more. Let us learn from our mistakes and may we always remember this verse for the rest of our lives together.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/8.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton8" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage8" aria-expanded="false" aria-controls="collapseMessage8" onclick="toggleMessage('toggleMessageButton8')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage8">
+                        <div class="card card-body">
+                            Devoting yourself towards your partner is a commitment. This verse reminds us to honor one another above ourselves. It means that having in a relationship, there should never be me or I or myself anymore, it should be us. May this verse remind us of being mindful to each other.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/9.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton9" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage9" aria-expanded="false" aria-controls="collapseMessage9" onclick="toggleMessage('toggleMessageButton9')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage9">
+                        <div class="card card-body">
+                            I actually put this for myself to remind me that I have a Godly woman that God gave me. To remind myself how worth it you are, how amazing you are, and that you are all I want and I need.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/10.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton10" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage10" aria-expanded="false" aria-controls="collapseMessage10" onclick="toggleMessage('toggleMessageButton10')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage10">
+                        <div class="card card-body">
+                            I put this as a reminder for myself that I have to love you like Christ sacrificed himself for us. That's why I'd sacrifice everything just to keep you. I've been disconnected to things that might hurt you. Yes, I have failed a lot of times but I am learning as time goes by to make up for my mistakes. So may this verse be a reminder for me to be a better future husband for my future wife.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/11.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton11" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage11" aria-expanded="false" aria-controls="collapseMessage11" onclick="toggleMessage('toggleMessageButton11')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage11">
+                        <div class="card card-body">
+                            You have been having boundaries before and sometimes I think you've been carrying burdens alone so I put this to remind us that we have each other to share the burden with. If the circumstances are too hard, we have each other to lean on. So, may this verse remind us to rely more on each other rather than not sharing the burden.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/12.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton12" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage12" aria-expanded="false" aria-controls="collapseMessage12" onclick="toggleMessage('toggleMessageButton12')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage12">
+                        <div class="card card-body">
+                            Action speaks louder than words. As another verse from the bible says that words are deceitful our action speaks louder than words. May this verse reminds us to be more focused on our actions than in our words specially when we are apologizing on something we've done wrong. We should be more accountable and show our sincerity with our actions not just in words.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/13.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton13" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage13" aria-expanded="false" aria-controls="collapseMessage13" onclick="toggleMessage('toggleMessageButton13')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage13">
+                        <div class="card card-body">
+                            Most of the times, we fail to communicate properly and gently. We shout at each other, say things that we do not mean and at the end, hurting each other. May this verse remind us to be more gentle and always think about what we are about to say if the words we are about to say will hurt each other. Let us communicate much better.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/14.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton14" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage14" aria-expanded="false" aria-controls="collapseMessage14" onclick="toggleMessage('toggleMessageButton14')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage14">
+                        <div class="card card-body">
+                            Love is not enough but love has a powerful effect on us. Sometimes we may be angry with each other but our love never fails us. May this verse be our reminder to make love be the foundation of every virtues that we are building into our relationship.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/15.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton15" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage15" aria-expanded="false" aria-controls="collapseMessage15" onclick="toggleMessage('toggleMessageButton15')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage15">
+                        <div class="card card-body">
+                            Most of the time that we are mad, we became more unaware of what the person might feel about what we say and that leads to insults and hurting one another without regards of our feelings. This verse reminds us to be more kind despite of being mad and to forgive one another just like how Jesus forgave us.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/16.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton16" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage16" aria-expanded="false" aria-controls="collapseMessage16" onclick="toggleMessage('toggleMessageButton16')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage16">
+                        <div class="card card-body">
+                            I have added this because I want to remind the both of us that when we bond, when we do things such as in our dates or in our presents, may we not think of it as an investment into one another but as a portrait of our love for each other. That we didn't do these things because we want something in return but because we do it for love.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/17.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton17" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage17" aria-expanded="false" aria-controls="collapseMessage17" onclick="toggleMessage('toggleMessageButton17')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage17">
+                        <div class="card card-body">
+                            Most of our conflicts result in pain and more anger because of our hatred and unforgiveness. We often forget how much we love each other. Therefore, may this verse be a reminder that holding onto hatred makes our conflicts and problems much worse. Instead, may we remember how we love each other rather than dwell on our hatred.                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/18.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton18" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage18" aria-expanded="false" aria-controls="collapseMessage18" onclick="toggleMessage('toggleMessageButton18')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage18">
+                        <div class="card card-body">
+                            Keeping each other's commands doesn’t just mean respect; it also signifies love. The commands we give to one another represent our love for each other. These commands or rules are not just any commands; keeping them will also bring us greater peace.                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/19.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton19" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage19" aria-expanded="false" aria-controls="collapseMessage19" onclick="toggleMessage('toggleMessageButton19')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage19">
+                        <div class="card card-body">
+                            Loving sincerely means knowing what is good and what is bad. We may fall into sin many times, but the love of the Lord forgives us. May we learn from our mistakes, and may this verse remind us to love sincerely, to hate evil deeds, and to cling to what is good for us.                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/20.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton20" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage20" aria-expanded="false" aria-controls="collapseMessage20" onclick="toggleMessage('toggleMessageButton20')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage20">
+                        <div class="card card-body">
+                            I can't remember a time when we were both too afraid to love, too afraid that we might lose each other. In the past, I was always afraid of losing you. But may this verse remind us that perfect love for one another drives out our fear—fear of losing each other—because I know that our perfect love removes the fear of losing one another.                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/21.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton21" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage21" aria-expanded="false" aria-controls="collapseMessage21" onclick="toggleMessage('toggleMessageButton21')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage21">
+                        <div class="card card-body">
+                            As Jesus loves us deeply, He sacrificed Himself for us. This proves that love covers a multitude of sins. Therefore, may we truly and deeply love each other more.                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/22.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton22" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage22" aria-expanded="false" aria-controls="collapseMessage22" onclick="toggleMessage('toggleMessageButton22')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage22">
+                        <div class="card card-body">
+                            This is my favorite verse, and I want to add it as a reminder that when we don’t know what will happen or what to do in situations we cannot escape from, we need to trust God with all our hearts and surrender every concern we have to Him. Especially when we are not on good terms and don’t know what to do, may we always trust in the Lord, knowing that He will make a way to fix things and bring us back together                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/23.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton23" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage23" aria-expanded="false" aria-controls="collapseMessage23" onclick="toggleMessage('toggleMessageButton23')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage23">
+                        <div class="card card-body">
+                            We are not yet married, but I want to remind us both that as we love and care for each other, we should never be selfish. We are in this together, and in every problem, in every circumstance, and every time we feel depressed, sad, or tired, may we lean on each other and care for one another as one.                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/24.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton24" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage24" aria-expanded="false" aria-controls="collapseMessage24" onclick="toggleMessage('toggleMessageButton24')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage24">
+                        <div class="card card-body">
+                            Encouragement is a powerful way to uplift each other because it boosts our morale, confidence, and mood. Life is hard enough, so instead of making things more difficult for one another, may we encourage each other more.                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/25.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton25" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage25" aria-expanded="false" aria-controls="collapseMessage25" onclick="toggleMessage('toggleMessageButton25')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage25">
+                        <div class="card card-body">
+                            This is a common Bible verse that has been taught to us since we were children. In our relationship, may this verse remind us that God has a bright future and a plan for us. Even when we face challenges, God’s plan is to prosper us and not to harm us.                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/26.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton26" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage26" aria-expanded="false" aria-controls="collapseMessage26" onclick="toggleMessage('toggleMessageButton26')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage26">
+                        <div class="card card-body">
+                            I remember the day when I gave food to an elderly person, and you actually fell harder for me. I didn’t even notice that you had taken a picture. So, may this verse remind us to be good examples and role models for each other, helping us to grow in our love and in good deeds.                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" data-aos="fade-up">
+                <img src="verses/27.jpg" class="card-img-top" alt="Card image">
+                <div class="card-body">
+                    
+                    <button id="toggleMessageButton27" class="d-grid w-100 bg-transparent border border-0" data-bs-toggle="collapse" data-bs-target="#collapseMessage27" aria-expanded="false" aria-controls="collapseMessage27" onclick="toggleMessage('toggleMessageButton27')">
+                        Show message
+                    </button>
+                    <div class="collapse mt-3" id="collapseMessage27">
+                        <div class="card card-body">
+                            Anxiety often creeps in, especially when we are angry with each other. But let this verse remind us that over our anxiety, we should surrender everything to God and lean on Him, as He is the one who can help us, especially when we are feeling anxious.                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+        </div>
+    </div>
+      
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <script>
+        function toggleMessage(buttonId) {
+            const button = document.getElementById(buttonId);
+            const isCollapsed = button.getAttribute('aria-expanded') === 'true';
+            
+            if (isCollapsed) {
+                button.textContent = 'Hide message';
+            } else {
+                button.textContent = 'Show message';
+            }
+        }
+
+        </script>
+</body>
+</html>
